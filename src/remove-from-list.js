@@ -25,13 +25,19 @@ const {
  *   }
  * }
  */
-function removeKFromList(list, value) {
-   while (list.next) {
-    if(list.value === value){
-      console.log(value);
-    }
+ function removeKFromList(list, k) {
+  if (list.value === k){
     list = list.next;
+  }
 
+  let current = list;
+  while (current.next) {
+    if (current.next.value === k) {
+      current.next = current.next.next;
+    }
+    else {
+      current = current.next;
+    }
   }
   return list;
 }
@@ -40,9 +46,3 @@ module.exports = {
   removeKFromList
 };
 
-
-const list = new ListNode(1);
-list.next = new ListNode(2);
-list.next.next = new ListNode(1);
-console.log(list);
-console.log(removeKFromList(list, 1));
