@@ -1,4 +1,6 @@
-const { NotImplementedError } = require('../extensions/index.js');
+const {
+  NotImplementedError
+} = require('../extensions/index.js');
 
 // const { ListNode } = require('../extensions/list-node.js');
 
@@ -20,7 +22,7 @@ class Queue {
     // remove line with error and write your code here
   }
 
-  enqueue(/* value */) {
+  enqueue( /* value */ ) {
     throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
   }
@@ -34,3 +36,4 @@ class Queue {
 module.exports = {
   Queue
 };
+

@@ -3,6 +3,7 @@ class ListNode {
     this.value = x;
     this.next = null;
   }
+  
 }
 
 module.exports = {
